@@ -73,5 +73,19 @@ Route::group(['prefix'  =>  'admin'], function () {
             Route::get('/{id}/delete', 'Admin\CountriesController@delete')->name('admin.country.delete');
          
         });
+
+        /**********
+         * SalariesController
+         * ******** */
+        Route::group(['prefix'  =>   'salary'], function() {
+ 
+            Route::get('/', 'Admin\SalariesController@index')->name('admin.salary.index');
+            Route::get('/create', 'Admin\SalariesController@create')->name('admin.salary.create');
+            Route::post('/store', 'Admin\SalariesController@store')->name('admin.salary.store');
+            Route::get('/{id}/edit', 'Admin\SalariesController@edit')->name('admin.salary.edit');
+            Route::post('/update', 'Admin\SalariesController@update')->name('admin.salary.update');
+            Route::get('/{id}/delete', 'Admin\SalariesController@delete')->name('admin.salary.delete');
+         
+        });
     });
 });
