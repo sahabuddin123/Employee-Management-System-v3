@@ -69,7 +69,7 @@ class SalariesController extends BaseController
     public function update(Request $request)
     {
         $this->validate($request, [
-            'dept_name'      =>  'required|max:191'
+            's_amount'      =>  'required|max:191'
         ]);
     
         $params = $request->except('_token');
